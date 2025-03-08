@@ -182,6 +182,7 @@ p:not([class]):not(:last-child) {
 /* =====================BANNER=================== */
 
 .banner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -226,11 +227,11 @@ p:not([class]):not(:last-child) {
 }
 
 .banner-wrapper {
-  position: relative;
-  display: inline-block;
+  /* position: relative;
+  display: inline-block; */
 }
 
-.banner-wrapper::before {
+/* .banner-wrapper::before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -240,11 +241,26 @@ p:not([class]):not(:last-child) {
   height: 138px;
   border-radius: 69px;
   background-color: var(--color-red);
-}
+} */
 
 .banner-wrapper-image {
+  position: absolute;
   margin-right: 32px;
   border-radius: 62px;
+  z-index: 3;
+  top: 50px;
+  left: 1180px;
+}
+
+.banner-wrapper-layer {
+  position: absolute;
+  z-index: 2;
+  top: 262px;
+  left: 1173px;
+  width: 413px;
+  height: 138px;
+  border-radius: 69px;
+  background-color: var(--color-red);
 }
 
 /* =====================FLEX-CARDS=================== */
