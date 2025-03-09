@@ -233,11 +233,9 @@ p:not([class]):not(:last-child) {
 
 .banner-wrapper-image {
   position: relative;
-  /* margin-right: 32px;
-  border-radius: 62px; */
+  margin-right: 32px;
+  border-radius: 62px;
   z-index: 3;
-  /* top: 51px;
-  left: 1180px; */
 }
 
 .banner-wrapper-layer {
@@ -566,9 +564,17 @@ p:not([class]):not(:last-child) {
 /* =====================MEDIA=================== */
 
 @media (max-width: 1800px) {
+  .banner {
+    margin-bottom: 85px;
+  }
   .flex-cards {
     flex-direction: column;
-    row-gap: 32px;
+    justify-content: center;
+    row-gap: 40px;
+    margin-bottom: 56px;
+  }
+  .flex-cards-body {
+    max-width: 520px;
   }
   .container-cards {
     max-width: 524px;
@@ -580,13 +586,25 @@ p:not([class]):not(:last-child) {
   }
 }
 
-@media (max-width: 1050px) {
-  .banner-wrapper {
-    display: none;
+@media (max-width: 1500px) {
+  .work {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    margin-bottom: 100px;
+  }
+  .work-block {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 1200px) {
+  .flex-cards {
+    margin-bottom: 30px;
+  }
+  .grid-cards-title {
+    text-align: center;
+  }
   .grid-cards-main {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -606,19 +624,90 @@ p:not([class]):not(:last-child) {
   .grid-cards-item:nth-child(5) {
     grid-column: 3 / 5;
   }
+
+  .work-contact {
+    height: 430px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .banner-body {
+    margin-left: 150px;
+  }
+  .banner-wrapper {
+    display: none;
+  }
+  .flex-cards {
+    align-items: center;
+  }
+  .work-contact {
+    width: 660px;
+  }
+  .work-contact-title {
+    font-size: 38px;
+    margin-bottom: 32px;
+  }
+  .work-contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+  .work-contact-message {
+    width: 387px;
+  }
 }
 
 @media (max-width: 767px) {
   .header {
     flex-direction: column;
     padding-top: 16px;
+    margin-bottom: 24px;
   }
   .header-logo {
     margin-bottom: 20px;
   }
-
+  .button-media {
+    display: none;
+  }
+  .banner {
+    height: 311px;
+    margin-bottom: 50px;
+  }
+  .banner-body {
+    margin-left: 128px;
+  }
+  .banner-block {
+    max-width: 350px;
+  }
+  .banner-block-title {
+    font-size: 48px;
+  }
+  .banner-block-text {
+    font-size: 22px;
+  }
+  .flex-cards {
+    row-gap: 20px;
+    margin-bottom: 20px;
+  }
+  .flex-cards-body {
+    padding: 14px;
+  }
+  .flex-cards-text {
+    margin-bottom: 12px;
+  }
+  .grid-cards {
+    margin-bottom: 60px;
+  }
+  .grid-cards-title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
   .grid-cards-main {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+  .grid-cards-item {
+    padding: 14px;
   }
   .grid-cards-item:nth-child(1),
   .grid-cards-item:nth-child(2),
@@ -627,6 +716,39 @@ p:not([class]):not(:last-child) {
   .grid-cards-item:nth-child(5) {
     grid-column: 1 / 3;
     grid-row: auto;
+  }
+  .work-contact {
+    width: 345px;
+  }
+  .work-contact-title {
+    font-size: 28px;
+  }
+  .work-contact-wide {
+    width: 300px;
+  }
+  .work-contact-message {
+    width: 300px;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-logo {
+    padding: 12px 0;
+  }
+  .footer-design-link {
+    padding-right: 0;
+    padding-bottom: 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner-body {
+    margin-left: 25px;
+  }
+  .work {
+    margin-bottom: 50px;
   }
 }
 
@@ -645,5 +767,60 @@ p:not([class]):not(:last-child) {
   .header-menu-link {
     flex-direction: row;
     column-gap: 10px;
+  }
+  .flex-cards-text {
+    width: 360px;
+  }
+}
+
+@media (max-width: 430px) {
+  .button {
+    font-size: 20px;
+  }
+  .header {
+    margin-bottom: 50px;
+  }
+  .header-menu-link {
+    font-size: 20px;
+  }
+  .banner {
+    height: 345px;
+  }
+  .banner-body {
+    margin-left: 56px;
+  }
+  .banner-block {
+    margin-bottom: 28px;
+  }
+  .banner-block-title {
+    font-size: 34px;
+  }
+  .flex-cards-title {
+    font-size: 30px;
+  }
+  .flex-cards-text {
+    width: 320px;
+    font-size: 20px;
+  }
+  .flex-cards-button {
+    font-size: 16px;
+  }
+  .grid-cards-text {
+    font-size: 20px;
+  }
+  .work {
+    margin-bottom: 32px;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-logo {
+    padding: 12px 0;
+  }
+  .footer-design-link {
+    padding-right: 0;
+    padding-bottom: 12px;
   }
 }
