@@ -20,6 +20,10 @@
   --transition-duration: 0.2s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-famyli-base);
   color: var(--color-dark);
